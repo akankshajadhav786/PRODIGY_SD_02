@@ -1,0 +1,37 @@
+import java.util.*;
+ class Game
+ {
+    public static void main(String[] args) {
+        int a,c=0,i;
+        Scanner sc=new Scanner(System.in);
+        double randomDouble = Math.random();
+        int n = (int) (randomDouble * 100);
+
+        
+        while(true)
+        {
+        System.out.println("Guess the Number: ");
+        a=sc.nextInt();
+        c++;
+
+         if(a>n)
+          {
+              System.out.println("The guess is high");
+          }
+          else if(a<n)
+          {
+              System.out.println("The guess is low");
+          }
+        else
+          {
+              System.out.println("YOU ARE CORRECT! CONGRATULATIONS!");
+            System.out.println("THE ATTEMPTS U TOOK TO GUESS IT CORRECT:"+c);
+            break;
+              
+          }
+            
+        }
+        
+    }
+
+}
